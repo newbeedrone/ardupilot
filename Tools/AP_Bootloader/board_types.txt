@@ -601,6 +601,9 @@ AP_HW_NewBeeDrone_PixNova            5900
 # IDs 5905-5909 reserved for NewBeeDrone HUMMINGBIRD
 AP_HW_NewBeeDrone_HUMMINGBIRD_FC305_H7    5905
 
+# IDs 5910-5914 reserved for NewBeeDrone INFINITY
+AP_HW_NewBeeDrone_INFINITY_FC305_H7       5910
+
 # IDs 6000-6099 reserved for SpektreWorks
 AP_HW_sw-spar-f407                   6000
 AP_HW_sw-boom-f407                   6001
