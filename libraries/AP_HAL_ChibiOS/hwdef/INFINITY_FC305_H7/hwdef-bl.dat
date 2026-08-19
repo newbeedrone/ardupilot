@@ -1,0 +1,54 @@
+# hw definition file for processing by chibios_hwdef.py
+# bootloader for NewBeeDrone INFINITY FC305 H7
+
+# MCU class and specific type
+MCU STM32H7xx STM32H743xx
+
+# board ID. See Tools/AP_Bootloader/board_types.txt
+APJ_BOARD_ID AP_HW_NewBeeDrone_INFINITY_FC305_H7
+
+# crystal frequency
+OSCILLATOR_HZ 8000000
+
+FLASH_SIZE_KB 2048
+
+USB_STRING_MANUFACTURER "NewBeeDrone"
+USB_STRING_PRODUCT "INFINITY_FC305_H7-BL"
+
+# bootloader starts at zero offset
+FLASH_RESERVE_START_KB 0
+
+# the location where the bootloader will put the firmware
+# must match FLASH_RESERVE_START_KB in hwdef.dat
+FLASH_BOOTLOADER_LOAD_KB 128
+
+# keep the final flash page reserved while allowing PX4's 1792 KiB image area
+FLASH_RESERVE_END_KB 128
+
+# USB only in bootloader
+SERIAL_ORDER OTG1
+
+define BOARD_OTG_NOVBUSSENS 1
+define AP_FASTBOOT_ENABLED 0
+PA11 OTG_FS_DM OTG1
+PA12 OTG_FS_DP OTG1
+
+PA13 JTMS-SWDIO SWD
+PA14 JTCK-SWCLK SWD
+
+# status LED
+PE3 LED_BOOTLOADER OUTPUT LOW
+define HAL_LED_ON 0
+
+# passive beeper, inverted (active low)
+PA15 BUZZER OUTPUT HIGH PUSHPULL
+
+# chip select pins
+PA4 IMU_CS CS
+PD10 AT7456E_CS CS
+PE11 EXT_SPI_CS CS
+
+# keep the 12V rail enabled and control outputs in their startup states
+PC15 VDD_12V_EN OUTPUT HIGH PUSHPULL
+PC14 CAM_SWITCH OUTPUT HIGH PUSHPULL
+PC13 PINIO3 OUTPUT HIGH PUSHPULL

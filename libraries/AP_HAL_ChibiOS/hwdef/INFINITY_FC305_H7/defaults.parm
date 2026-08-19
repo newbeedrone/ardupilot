@@ -1,0 +1,5 @@
+# setup for the NeoPixel LED on output 11
+SERVO11_FUNCTION 120
+
+# setup the inverted tone alarm on output 12
+SERVO12_FUNCTION 139
