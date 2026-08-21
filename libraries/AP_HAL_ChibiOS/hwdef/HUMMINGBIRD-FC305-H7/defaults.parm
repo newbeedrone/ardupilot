@@ -1,2 +1,7 @@
 # setup for LEDs on chan11
 SERVO11_FUNCTION 120
+
+# keep PINIO outputs high after relay initialization
+RELAY1_DEFAULT 1
+RELAY2_DEFAULT 1
+RELAY3_DEFAULT 1
