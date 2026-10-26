@@ -19,7 +19,7 @@ standards. This target supports the production PixNova Rev B hardware.
 - STM32H753IIK6 microcontroller running at 480 MHz
 - STM32F100 IOMCU
 - three ICM45686 IMUs on independent SPI buses
-- builtin IST8310 magnetometer
+- builtin BMM150 magnetometer
 - BMP388 and ICP-20100 barometers
 - temperature-controlled IMU heater
 - 32 KB SPI FRAM parameter storage
@@ -117,9 +117,7 @@ rail voltage telemetry.
 
 ## Compass
 
-The PixNova has a builtin IST8310 compass. Due to potential interference, an
-external compass mounted away from power wiring is normally recommended. The
-GPS1/I2C port supports an external IST8310 compass.
+The PixNova has a builtin BMM150 compass.
 
 ## GPIOs
 
